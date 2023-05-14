@@ -1,0 +1,477 @@
+body {
+  background-color: #E4DEDE;
+  margin: 0%;
+  font-family: 'segoe ui';
+  
+    
+}
+.container {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* reservations list */
+.reservation-slot{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-auto-rows: 10rem;
+  /* grid-column-gap: 10px; */
+
+  justify-content: space-around;
+  align-content: center;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+
+  border: 3px solid ;
+  border-radius: 3rem;
+  border-color: lightgray;
+  
+  margin: 5%;
+  height: 10rem;
+
+  font-size: 1vw;
+  color: #868686;
+
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+}
+.reservation-image{
+  border: 2px solid;
+  border-radius:1rem;
+  border-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  
+  color: black;
+  grid-column: 1 / 2;
+}
+.resturant-image{
+  width: 70%; 
+
+  border-radius: 70%;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.star-rating{
+  margin-top: 10%;
+  grid-column: 5 / 6;
+}
+.order-buttons{
+  justify-self: center;
+}
+.buttons{
+  font-size: 1vw;
+  border-radius: 2rem;
+  border: none;
+}
+.cancel{
+  grid-column: 6 / 7;
+  background-color: #FE9292;
+  padding: 5% 100%;
+  font-weight: bold;
+}
+/* *********** content responsive design **********/ 
+@media (max-width: 1024px) {
+  .buttons{
+   font-size: 2vw;
+  }
+  .reservation-slot{
+    font-size: 2vw;
+  }
+} 
+@media (max-width: 768px) {
+  .buttons{
+   font-size: 2vw;
+  }
+  .reservation-slot{
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 5rem;
+    justify-items: center;
+    font-size: 2vw;
+    padding-top: 2%;
+  }
+  .reservation-image{
+    grid-area: 1/1/3/2;
+  }
+} 
+@media (max-width: 600px) {
+  .buttons{
+   font-size: 3vw;
+  }
+  .reservation-slot{
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 5rem;
+    justify-items: center;
+    font-size: 3vw;
+    padding: 5%;
+    padding-top: 7%;
+  }
+  .reservation-image{
+    grid-area: 1/1/1/1;
+  }
+}
+
+
+/****  header *****/ 
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header__title {
+  text-align: center;
+  margin-left: 10px;
+  
+  font-size: 24px;
+}
+.header-center {
+  
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* increase the font size */
+}
+
+
+
+.header-link {
+  margin-left: 10px;
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  color: #EC0000;
+}
+
+
+
+.header-link-space {
+  width: 20px;
+}
+
+.header-right {
+  margin-left: auto;
+}
+
+.header-button {
+  background-color: #EC0000;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.header-button:hover {
+  background-color: #990000;
+}
+
+/**** responsive for header *****/ 
+/* For screens up to 600px wide */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-left {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .header__title {
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .header-center {
+    order: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .header-right {
+    order: 3;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+
+  .header-link {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .header-link-space {
+    display: none;
+  }
+
+  .header-button {
+    font-size: 16px;
+    padding: 5px 15px;
+  }
+}
+
+/* For screens wider than 600px */
+@media only screen and (min-width: 601px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .header-left {
+    margin-right: auto;
+  }
+
+  .header__title {
+    margin-left: 10px;
+  }
+
+  .header-center {
+    margin-right: auto;
+  }
+
+  .header-link-space {
+    display: inline-block;
+  }
+}
+
+/**** responsive for header *****/ 
+
+
+.header__search {
+  
+  padding-top:50px ;
+  display: flex;
+  align-items: center;
+}
+
+.header__search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-right: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.header__search-btn {
+  margin-top:5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #EC0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header__search-filters {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.header__search-filters label {
+  margin-left: 10px;
+}
+
+.header__search-select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px 20px 20px 20px;
+  width: 300px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-select-text {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.card-select {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.card-select label {
+  display: block;
+}
+
+.card-select select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.card-time-text {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-time-select {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.card-time-select label {
+  display: block;
+}
+
+.card-time-select select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.card-button {
+  padding: 10px 30px;
+  font-size: 16px;
+  background-color: #EC0000;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.card-button:hover {
+  background-color: #C40000;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 200px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/** show more styles **/
+
+
+
+
+
+/* Responsive design for max-width 600px */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*--------------- footer ----*/ 
+.footer {
+  background-color: #EC0000;
+  color: #fff;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+}
+
+.footer-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: auto;
+}
+
+/*------------------ footer end -------/*

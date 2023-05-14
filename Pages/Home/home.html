@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Pages/Home/home.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body style="background-color: #e4dede">
+    <!-- header -->
+
+    <div class="container">
+      <header class="header">
+        <div class="header-left">
+          <img src="/Home/Assets/Ehgzly.png" alt="Website Icon" />
+          <h1 class="header-title">Ehgezly||احجزلي</h1>
+        </div>
+        <div class="header-center">
+          <a href="home" class="header-link" style="color: #ec0000">Home</a>
+          <span class="header-link-space"></span>
+          <a href="Reservations" class="header-link">Reservations</a>
+        </div>
+        <div class="header-right">
+          <a href="/Sign_in" id="sign">
+            <button class="header-button">Sign In</button></a
+          >
+        </div>
+      </header>
+
+      <!-- image with text and book now button -->
+
+      <div class="content">
+        <div class="content-text">
+          <p id="first-p">
+            Food Tastes <span class="content-text-break">Better</span> When
+            Shared
+          </p>
+          <p id="second-p">Simple and fast way to book a table</p>
+          <span class="book-now"> Book now </span>
+        </div>
+        <div class="content-image">
+          <img src="Home/Assets/home.svg" alt="Restaurant Image" />
+        </div>
+      </div>
+
+      <!-- Searching tool  and the main body-->
+      <div class="container">
+        <h1 class="header__title">Restaurants</h1>
+        <div class="header__search">
+          <div class="header__search-left">
+            <input
+              class="header__search-input"
+              type="text"
+              placeholder="Search..."
+            />
+            <button class="header__search-btn">Search</button>
+          </div>
+          <div class="header__search-middle"></div>
+          <div class="header__search-right">
+            <select class="header__search-select" name="filter" id="filter">
+              <option value="">All</option>
+              <option value="Italian">Italian</option>
+              <option value="Chinese">Chinese</option>
+              <option value="Mexican">Mexican</option>
+              <option value="American">American</option>
+              <option value="Arabic">Arabic</option>
+            </select>
+          </div>
+        </div>
+        <!-- Card  -->
+        <div class="card-container" id="cards">
+          <div class="card">
+            <div class="card-icon">
+              <img src="Home/Assets/herfy.jpg" alt="Card Image" />
+            </div>
+            <h2 class="card-name">Card Title</h2>
+            <p class="card-description">Card description goes here.</p>
+            <div class="card-rating">
+              <a href="#"><span class="card-star">&#9734;</span></a>
+            </div>
+            <div class="card-buttons">
+              <a href="/Menu"><button class="card-button">Show Menu</button></a>
+              <a href="Booking">
+                <button class="card-button">Book Table</button></a
+              >
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <img src="Home/Assets/herfy.jpg" alt="Card Image" />
+            </div>
+            <h2 class="card-name">Card Title</h2>
+            <p class="card-description">Card description goes here.</p>
+            <div class="card-rating">
+              <a href="#"><span class="card-star">&#9734;</span></a>
+            </div>
+            <div class="card-buttons">
+              <a href="Menu"><button class="card-button">Show Menu</button></a>
+              <a href="Booking">
+                <button class="card-button">Book Table</button></a
+              >
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <img src="Home/Assets/herfy.jpg" alt="Card Image" />
+            </div>
+            <h2 class="card-name">Card Title</h2>
+            <p class="card-description">Card description goes here.</p>
+            <div class="card-rating">
+              <a href="#"><span class="card-star">&#9733;</span></a>
+            </div>
+            <div class="card-buttons">
+              <a href="Menu"><button class="card-button">Show Menu</button></a>
+              <a href="Booking">
+                <button class="card-button">Book Table</button></a
+              >
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <img src="Home/Assets/herfy.jpg" alt="Card Image" />
+            </div>
+            <h2 class="card-name">Card Title</h2>
+            <p class="card-description">Card description goes here.</p>
+            <div class="card-rating">
+              <a href="#"><span class="card-star">&#9734;</span></a>
+            </div>
+            <div class="card-buttons">
+              <a href="/Menu"><button class="card-button">Show Menu</button></a>
+
+              <button class="card-button">Book Table</button>
+              >
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <img src="Home/Assets/herfy.jpg" alt="Card Image" />
+            </div>
+            <h2 class="card-name">Card Title</h2>
+            <p class="card-description">Card description goes here.</p>
+            <div class="card-rating">
+              <a href="#"><span class="card-star">&#9734;</span></a>
+            </div>
+            <div class="card-buttons">
+              <a href="Menu"><button class="card-button">Show Menu</button></a>
+              <a href="Booking">
+                <button class="card-button">Book Table</button></a
+              >
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <img src="Home/Assets/herfy.jpg" alt="Card Image" />
+            </div>
+            <h2 class="card-name">Card Title</h2>
+            <p class="card-description">Card description goes here.</p>
+            <div class="card-rating">
+              <a href="#"> <span class="card-star">&#9734;</span></a>
+            </div>
+            <div class="card-buttons">
+              <a href="Menu"><button class="card-button">Show Menu</button></a>
+              <a href="Booking">
+                <button class="card-button">Book Table</button></a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- end of cards -->
+      </div>
+      <!-- end of main body -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-item">
+            <a href="#">Home</a>
+          </div>
+          <div class="footer-item">
+            <a href="#">About</a>
+          </div>
+          <div class="footer-item">
+            <a href="#">Contact us</a>
+          </div>
+          <div class="footer-item">
+            <a href="/AddResturant">Add Your Restaurant</a>
+          </div>
+        </div>
+        <div class="footer-copy">
+          &copy; 2023 all right reserved for Ehgezly
+        </div>
+      </footer>
+    </div>
+    <script src="/Pages/Scripts/home.js"></script>
+  </body>
+</html>

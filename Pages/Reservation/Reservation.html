@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Pages/Reservation/Reservation.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Reservation</title>
+</head>
+<body style=" background-color: #E4DEDE;">
+    <div class="container">
+        <header class="header">
+          <div class="header-left">
+            <img src="/Home/Assets/Ehgzly.png" alt="Website Icon">
+            <h1 class="header-title">Ehgezly||احجزلي</h1>
+          </div>
+          <div class="header-center">
+            <a href="home" class="header-link">Home</a>
+            <span class="header-link-space"></span>
+            <a href="/Reservations" class="header-link" style="color: red;">Reservations</a>
+          </div>
+          <div class="header-right">
+          <a href="/Sign_out">  <button class="header-button">Sign out</button></a>
+          </div>
+        </header>
+
+
+        <div class="content">
+            <div class="content-text">
+
+              <p id="first-p">Welcome, 
+              
+           
+              <span class="content-text-break">
+               
+              </span></p>
+            </div>
+            <div class="content-image">
+              <img src="/Reservation/Assets/home.svg" alt="Restaurant Image">
+            </div>
+          </div>
+
+    <main>
+        <h1 class="header__title">My Reservations</h1>
+        <div class="reservations">
+          {% for reservation in reservations %}
+          <div class="reservation-slot">
+          
+            <!-- Resturant image goes here -->
+            <div class="reservation-image"> 
+            
+              
+                <strong>{{reservation.name}}</strong>
+             
+            </div>
+  
+            <div class="date-order">
+              <p><strong>{{reservation.date}} <br><br>  Order No.{{reservation.orderNum}}</strong></p>
+            </div>
+  
+            <div class="time-order">
+              <p><strong>{{reservation.time}}</strong></p>
+            </div>
+  
+            <div class="seats-order">
+              <p><strong>Table for: {{reservation.seats}} seat(s) <br><br>  Status:
+                {% if reservation.status=="Pending" %}
+                <span id="Pending"> {{reservation.status}}</span></strong></p>
+                {% elif reservation.status=="Completed" %}
+                <span id="completed"> {{reservation.status}}</span></strong></p>
+                {% else %} 
+                <span id="canceled"> {{reservation.status}}</span></strong></p>
+                {% endif %}
+
+            </div>
+            {% if reservation.status=="Pending" %}
+            
+             <div class="order-buttons">
+              <!-- Take you to edit page -->
+              <a href="/Edit_page/{{reservation.orderNum}}" class="button edit">Edit</a>
+            </div>
+            <div class="order-buttons">
+              <button id="Cancel-btn" class="buttons cancel" style="cursor: pointer" data-reservation="{{reservation.orderNum}}">Cancel</button>
+            </div>
+            {% endif %}
+            <!-- where the buttons go -->
+           
+          
+          </div>
+          {% endfor %}
+
+          
+      
+      </div>
+    </main>
+    
+
+     <!-- Footer -->
+     <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-item">
+          <a href="#">Home</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">About</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">Contact us</a>
+        </div>
+        <div class="footer-item">
+          <a href="/AddResturant">Add Your Restaurant</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2023 all right reserved for Ehgezly
+      </div>
+    </footer>
+</body>
+<script src="/Pages/Scripts/reservations.js"></script>
+</html>

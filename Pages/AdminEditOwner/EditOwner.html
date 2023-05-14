@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Pages/AdminEditOwner/EditOwner.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Dashboard</title>
+</head>
+
+<body style=" background-color: #E4DEDE;">
+
+
+  <!-- header -->
+
+  <div class="container">
+    <header class="header">
+      <div class="header-left">
+        <img src="/Pages/AdminEditOwner/Assets/Ehgzly.png" alt="Website Icon">
+        <h1 class="header-title">Ehgezly||احجزلي</h1>
+      </div>
+      <div class="header-center">
+        <a href="/Home/home.html" class="header-link">Home</a>
+        <span class="header-link-space"></span>
+        <a href="#" class="header-link">Reservations</a>
+      </div>
+      <div class="header-right">
+        <button class="header-button">Sign out</button>
+      </div>
+    </header>
+
+
+
+    <!-- The main body-->
+    <div class="container">
+      <h1 class="header__title">Booking</h1>
+    </div>ِ
+    <!-- Card  -->
+    <div class="card">
+      <!-- <div class="card-icon">
+        <img src="/Pages/AdminEditOwner/Assets/herfy.jpg" alt="Restaurant Image">
+      </div> -->
+      <h2 class="card-name" id="cardTitle">Herfy</h2>
+      <div class="card-info">
+        <p id="IDDesc">Card description goes here.</p>
+      </div>
+    </div>
+
+
+
+    <!-- end of cards -->
+<div class="gridsContainer">
+    <div class="wrapper">
+      <div class="box1">
+        <label class="formLabel" for="OwnerName">Owner name: </label> <br>
+        <input class="formInput" type="text" id="OwnerName" name="OwnerName"  readonly>
+      </div>
+
+      <div class="box2">
+        <label class="formLabel" for="OwnerName">Restaurant name</label><br>
+        <input class="formInput" type="text" id="RestName" name="OwnerName"  readonly>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="box1">
+        <label class="formLabel" for="PhuneNum">Phone Number</label> <br>
+        <input class="formInput" type="tel" id="PhuneNum" name="PhuneNum"  readonly>
+      </div>
+
+      <div class="box2">
+        <label class="formLabel" for="Type">Type</label><br>
+        <input class="formInput" type="text" id="Type" name="Type"  readonly>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="box1">
+        <label class="formLabel" for="Email">Email</label> <br>
+        <input class="formInput" type="email" id="Email" name="Email" readonly>
+      </div>
+
+      <div class="box2">
+        <label class="formLabel" for="Type">Status </label><br>
+        <select class="formInput" name="status" id="status" >
+          <option value="Approved">Approved</option>
+          <option value="Suspended">Suspended</option>
+          <option value="Pending">Pending</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="box1">
+        <label class="formLabel" for="Discription">Discription</label> <br>
+        <input class="formInput" type="text" id="Discription" name="Discription" readonly>
+      </div>
+
+      <div class="box2">
+        <button onclick=UpdateSt()>Save & Exit</button>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  <!-- end of main body -->
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-item">
+        <a href="/home">Home</a>
+      </div>
+
+      <div class="footer-item">
+        <a href="/AddResturant1/AddResturanStep1.html">Add Your Restaurant</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; 2023 all right reserved for Ehgezly
+    </div>
+  </footer>
+
+</body>
+<script src="/Pages/Scripts/EditOwner.js"></script>
+</html>

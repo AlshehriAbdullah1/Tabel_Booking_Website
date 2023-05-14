@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit_reservation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Edit reservation</title>
+</head>
+<body style=" background-color: #E4DEDE;">
+
+
+  <!-- header -->
+
+    <div class="container">
+        <header class="header">
+          <div class="header-left">
+            <img src="Assets/Ehgzly.png" alt="Website Icon">
+            <h1 class="header-title">Ehgezly||احجزلي</h1>
+          </div>
+          <div class="header-center">
+            <a href="/home" class="header-link" >Home</a>
+            <span class="header-link-space"></span>
+            <a href="/Reservations" class="header-link">Reservations</a>
+          </div>
+          <div class="header-right">
+           <a id="/Sign_out"> <button  class="header-button">Sign out</button></a>
+          </div>
+        </header>
+    
+
+        <main>
+        <!-- Searching tool  and the main body-->
+        <div class="container">
+            <h1 class="header__title">Edit your reservation</h1>
+            <!-- This is one reservation slot -->
+        <div class="reservation-slot">
+     
+          <!-- Resturant image goes here -->
+          <div class="reservation-image">
+            <image  src="Assets/herfy.jpg" alt="Restaurant image" class="resturant-image">
+             <strong> <div id="rest_name">{{reservation.name}}</div></strong>
+            </image>
+          </div>
+
+          <div class="date-order">
+            <p><strong>{{reservation.date}} <br><br>  Order No.{{reservation.order}}</strong></p>
+          </div>
+
+          <div class="time-order">
+            <p><strong>{{reservation.time}}</strong></p>
+          </div>
+
+          <div class="date-order">
+            <p><strong>Table for: {{reservation.seats}} seat(s)</strong></p>
+          </div>
+          <!-- where the star ratings go -->
+          <div class="order-buttons">
+            <button class="buttons cancel" id="Cancel-btn">Cancel</button>
+          </div>
+         
+        </div>
+            
+            <!-- Card  -->
+            <div class="card">
+              <div class="card-icon">
+                <img src="Assets/herfy.jpg" alt="Restaurant Image">
+              </div>
+              <h2 class="card-name">Herfy</h2>
+              <div id="msg">
+             
+              <div class="card-info">
+                <p>Available times:</p>
+                <div class="card-select">
+                  <select id="times" name="times" style="border-radius: 2rem;">
+                    <option value="" disabled selected>Select Time</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-info" id="seats-div" style="display: none;">
+                <p>Number of seats:</p>
+                <div class="card-select">
+                  <select id="seats" name="seats" style="border-radius: 2rem; ">
+                  
+                  </select>
+                </div>
+              </div>
+              <div class="card-button-row">
+                <button 
+                onclick=Ehgz()
+                class="card-button">Update your booking</button>
+              </div>
+              </div>
+            </div>
+          </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-item">
+          <a href="home/home.html">Home</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">About</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">Contact us</a>
+        </div>
+        <div class="footer-item">
+          <a href="/AddResturant1/AddResturanStep1.html">Add Your Restaurant</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2023 all right reserved for Ehgezly
+      </div>
+    </footer>
+          </div>
+              <!-- end of cards -->
+    </div>
+  
+    <!-- end of main body -->
+
+
+
+
+
+    
+
+    
+
+    
+</div>
+</body>
+<script src="/Pages/Scripts/edit_reservation.js"></script>
+</html>   

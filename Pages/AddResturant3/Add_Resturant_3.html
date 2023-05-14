@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Add_Resturant_3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Add_Resturant_3</title>
+</head>
+<body style=" background-color: #E4DEDE;">
+
+
+  <!-- header -->
+
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+          <div class="header-left">
+            <img src="Images/Ehgzly.png" alt="Website Icon">
+            <h1 class="header-title">Ehgezly||احجزلي</h1>
+          </div>
+         
+      
+        </header>
+
+        <!-- The process time-line -->
+        <!--TimeLine-->
+        <section class="time-line-box">
+          <div class="swiper-container text-center"> 
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="timestamp"><span class="date"></span></div>
+                    <div class="status1"><span>Sign up</span></div>
+                  </div>  
+                  <div class="swiper-slide">
+                    <div class="timestamp"><span class="date"></span></div>
+                    <div class="status2"><span>Add restaurant information</span></div>
+                  </div>  
+                  <div class="swiper-slide">
+                    <div class="timestamp"><span class="date"></span></div>
+                    <div class="status3"><span>Complete Registeration</span></div>
+                  </div>  
+              </div>
+              <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!--end of timeline-->
+
+        <!-- Main body-->
+        <div class="container">
+            <div class="form-container">
+              <form>
+                <h2>Review You Application </h2>
+                <div class="form-group">
+                  <label for="Owner-Name">Your Name</label>
+                  <input type="text" id="Owner-Name" name="Owner-Name" placeholder="First and last name" required>
+                </div>
+                <div class="form-group">
+                  <label for="Phone">Phone</label>
+                  <input type="tel" id="Phone" name="Phone" placeholder="05x-xxx-xxxx" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="name@domain" required>
+                </div>
+                <div class="form-group">
+                  <label for="Restaurant-name">Restaurant</label>
+                  <input type="text" id="Restaurant-name" name="Restaurant-name" placeholder="Restaurant" required>
+                </div>
+                <div class="form-group submit">
+                  <button 
+                  onclick="window.location.pathname = 'OwnerHomePage/Owner_Home_Page.html';"
+                  type="submit" class="submit-btn">Submit Your Application</button>
+                </div>
+              </form>
+            </div>
+            
+        </div>
+    
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-item">
+        <a href="/Home/home.html">Home</a>
+      </div>
+      <div class="footer-item">
+        <a href="#">About</a>
+      </div>
+      <div class="footer-item">
+        <a href="#">Contact us</a>
+      </div>
+      <div class="footer-item">
+        <a href="/AddResturant1/AddResturanStep1.html">Add Your Restaurant</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      &copy; 2023 all right reserved for Ehgezly
+    </div>
+  </footer>
+</body>
+</html>   

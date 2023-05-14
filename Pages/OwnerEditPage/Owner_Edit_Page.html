@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner_Edit_Page</title>
+    <link rel="stylesheet" href="/Pages/OwnerEditPage/Owner_Edit_Page.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body style=" background-color: #E4DEDE;">
+    <div class="container">
+        <!-- header -->
+
+        <header class="header">
+            <div class="header-left">
+              <img src="/Pages/OwnerEditPage/Images/Ehgzly.png" alt="Website Icon">
+              <h1 class="header-title">Ehgezly||احجزلي</h1>
+            </div>
+            <div class="header-center">
+              <a href="/Owner_Home_Page" class="header-link" >Home</a>
+              <span class="header-link-space"></span>
+              <a href="/Owner_Edit_Page" class="header-link">My Restaurant</a>
+            </div>
+            <div class="header-right">
+              <a href="/Sign_out"> <button  class="header-button">Sign out</button></a>
+            </div>
+        </header>
+
+        <!-- main body -->
+        <div class="container">
+          <div class="body-container">
+             <div class="Edit-Logo-Container" >
+              <div class="card-container">
+                <div class="card">
+                  <div class="card-icon">
+                    <img src="/Pages/OwnerEditPage/Images/herfy.jpg" alt="Card Image" id="Logo">
+                  </div>
+                  <input type="text" name="card-name" id="card-name" placeholder="Card Title" value="{{restuanrant.name}}">
+                  <textarea name="card-description" id="card-description" placeholder="Card description goes here.">{{restuanrant.discription}}</textarea>
+                </div>
+              </div>
+
+              <div>
+                <label for="upload-Logo" class="Edit-Logo-btn" >Edit Logo</label>
+                <input type="file" accept="Image/jpeg, Image/jpg, Image/png" id="upload-Logo" style="display: none;">
+                <br><br>
+                <form action="" method="post">
+                  <label for="Table-of-4">No. seats: </label>
+                  <select name="Table-of-4" id="Table-of-4">
+                    <option value="{{restuanrant.seats}}">{{restuanrant.seats}}</option>
+                  </select>
+                </form>
+              </div>
+              <div class="Loc-Info-Container">
+                <div class="Personal-Info-Container">
+                  <form action="" method="post" class="Personal-Info">
+                    <label for="Owner-Name">Owner Name</label>
+                    <input type="text" name="Owner-Name" id="Owner-Name" value="{{personalInfo.name}}">
+                    <label for="Phone">Phone Number</label>
+                    <input type="text" name="Phone" id="Phone" value="{{personalInfo.phone}}">
+                    <label for="Email">Email</label>
+                    <input type="text" name="Email" id="Email" value="{{personalInfo.email}}">
+                    <label for="Type">Type</label>
+                    <input type="text" name="Type" id="Type" value="{{restuanrant.type}}">
+                    <label for="Status">Status:</label>
+                    <input type="text" name="Status" id="Status" value="{{restuanrant.status}}" readonly>
+                  </form>
+                </div>
+                <div class="Loc-Container">
+                  <iframe src="{{restuanrant.location}}" width="300" height="200" style="border:0;" loading="lazy"></iframe>
+                </div>
+              </div>
+
+             </div>
+
+             <div class="Main-menu">
+              <details>
+                <summary>Menu</summary>
+                <!-- Menus -->
+                <div class="menu-container">
+                  <div class="Appetizer">
+                    <div class="menu-category">Appetizer</div>
+                    <div class="gird-container">
+                      {% for appetizer in restuanrant.menu.Appetizer %}
+                      <div class="item">
+                          <img src="/Pages/OwnerEditPage/Images/Menu-Item.png" alt="{{appetizer.name}}">
+                          <input type="text" name="name" id="name" value="{{appetizer.name}}">
+                          <div class="price">
+                              <input type="text" name="price" id="price" value="{{appetizer.price}}"><span>SAR</span>
+                          </div>
+                        </div>
+                        {% endfor %}
+                      <div class="item new-item">
+                          <button></button>
+                      </div>
+                        
+                    </div>
+                  </div>
+                  <div class="Main-Dishes">
+                    <div class="menu-category"><p>Main Dishes</p></div>
+                    <div class="gird-container">
+                      {% for mainDish in restuanrant.menu.Main_Dishes %}
+                      <div class="item">
+                          <img src="/Pages/OwnerEditPage/Images/Menu-Item.png" alt="{{mainDish.name}}">
+                          <input type="text" name="name" id="name" value="{{mainDish.name}}">
+                          <div class="price">
+                              <input type="text" name="price" id="price" value="{{mainDish.price}}"><span>SAR</span>
+                          </div>
+                      </div>
+                      {% endfor %}
+                      <div class="item new-item">
+                          <button></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="Desserts">
+                    <div class="menu-category"><p>Dessert</p></div>
+                    <div class="gird-container">
+                      {% for Dessert in restuanrant.menu.Dessert %}
+                      <div class="item">
+                          <img src="/Pages/OwnerEditPage/Images/Menu-Item.png" alt="{{Dessert.name}}">
+                          <input type="text" name="name" id="name" value="{{Dessert.name}}">
+                          <div class="price">
+                              <input type="text" name="price" id="price" value="{{Dessert.price}}"><span>SAR</span>
+                          </div>
+                      </div>
+                      {% endfor %}
+                      <div class="item new-item">
+                          <button></button>
+                      </div>
+                        
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Menus -->
+              </details>
+             </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-item">
+          <a href="#">Home</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">About</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">Contact us</a>
+        </div>
+        <div class="footer-item">
+          <a href="/AddResturant1/AddResturanStep1.html">Add Your Restaurant</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2023 all right reserved for Ehgezly
+      </div>
+    </footer>
+    <script src="/Pages/Scripts/OwnerEditPage.js"></script>
+</body>
+</html>

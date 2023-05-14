@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body style=" background-color: #E4DEDE;">
+
+
+  <!-- header -->
+  
+
+    <div class="container">
+        <header class="header">
+          <div class="header-left">
+            <img src="/Booking/Assets/Ehgzly.png" alt="Website Icon">
+            <h1 class="header-title">Ehgezly||احجزلي</h1>
+          </div>
+          <div class="header-center">
+            <a href="/home" class="header-link" >Home</a>
+            <span class="header-link-space"></span>
+            <a href="/Reservations" class="header-link">Reservations</a>
+          </div>
+          <div class="header-right">
+           <a href="/Sign_out"> <button  class="header-button">Sign out</button></a>
+          </div>
+        </header>
+    
+
+        <!-- image with text and book now button -->
+   
+  
+  
+
+  
+
+
+ 
+        <main>
+
+        <!-- Searching tool  and the main body-->
+        <div class="container">
+            <h1 class="header__title">Booking</h1>
+          
+            </div>
+            <!-- Card  -->
+            <div class="card">
+              <div class="card-icon">
+                <img src="/uploads/{{rest.imgs}}" alt="Burger" />
+                <!-- <img src="/Booking/Assets/herfy.jpg" alt="Restaurant Image"> -->
+              </div>
+              <h2 class="card-name">{ rest.name}</h2>
+              <div id="msg">
+              <div class="card-info" >
+                <p>Select available times:</p>
+                <div class="card-select">
+                  <label for="times">Times:</label>
+                  <select id="times" name="times">
+                    <option value="" disabled selected>Select Time</option>
+                    <!-- <option value="12:00 PM">12:00 PM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="6:00 PM">6:00 PM</option>
+                    <option value="7:00 PM">7:00 PM</option>
+                    <option value="8:00 PM">8:00 PM</option>
+                    <option value="9:00 PM">9:00 PM</option> -->
+                  </select>
+                </div>
+              </div>
+              <div class="card-info" id="seats-div"style="display: none;">
+                <p>Select number of seats:</p>
+                <div class="card-select" >
+                  <label for="seats">Seats:</label>
+                  <select id="seats" name="seats">
+                    
+                    
+                    <!-- <option value="1">1</option> 
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option> -->
+                  </select>
+                </div>
+              </div>
+             
+              <div class="card-button-row">
+                <button onclick="Ehgz()"class="card-button">Ehgz Now!</button>
+              </div>
+            </div>
+          </div>
+              
+          </main>      
+             
+                
+              
+ <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-item">
+          <a href="/Booking/">Home</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">About</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">Contact us</a>
+        </div>
+        <div class="footer-item">
+          <a href="/AddResturant">Add Your Restaurant</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2023 all right reserved for Ehgezly
+      </div>
+    </footer>
+            
+             
+
+            
+              </div>
+              <!-- end of cards -->
+
+
+
+
+    
+              
+    </div>
+    <!-- end of main body -->
+
+
+
+
+
+    <!-- Footer -->
+   
+
+    
+</div>
+<script src="/Pages/Scripts/booking.js"></script>
+</body>
+</html>   

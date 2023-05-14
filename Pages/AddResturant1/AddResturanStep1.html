@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Pages/AddResturant1/AddResturanStep1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap"
+      rel="stylesheet"
+    />
+    <title>Step 1</title>
+  </head>
+  <body style="background-color: #e4dede">
+    <!-- header -->
+
+    <div class="container">
+      <header class="header">
+        <div class="header-left">
+          <img
+            src="/Pages/AddResturant1/Assets/Ehgzly.png"
+            alt="Website Icon"
+          />
+          <h1 class="header-title">Ehgezly||احجزلي</h1>
+        </div>
+        <div class="header-center">
+          <a href="/home" class="header-link">Home</a>
+          <span class="header-link-space"></span>
+          <a href="#" class="header-link">Reservations</a>
+        </div>
+        <div class="header-right">
+          <button class="header-button">Sign out</button>
+        </div>
+      </header>
+
+      <!--TimeLine-->
+      <section class="time-line-box">
+        <div class="swiper-container text-center">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="timestamp"><span class="date"></span></div>
+              <div class="status1"><span>Sign up</span></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="timestamp"><span class="date"></span></div>
+              <div class="status2"><span>Add restaurant information</span></div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!--end of timeline-->
+
+      <!--Sign up card-->
+
+      <div class="form-container">
+        <form method="post" action="/addRes1">
+          <h2>Sign Up</h2>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-group">
+            <button
+            type="submit"
+            class="btn-register"
+            >
+              Register Now!
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-item">
+          <a href="home">Home</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">About</a>
+        </div>
+        <div class="footer-item">
+          <a href="#">Contact us</a>
+        </div>
+        <div class="footer-item">
+          <a href="/AddResturant">Add Your Restaurant</a>
+        </div>
+      </div>
+      <div class="footer-copy">&copy; 2023 all right reserved for Ehgezly</div>
+    </footer>
+  </body>
+</html>

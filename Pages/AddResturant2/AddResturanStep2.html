@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="AddResturanStep2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+
+    <title>Step 2</title>
+</head>
+
+<body style=" background-color: #E4DEDE;">
+
+    <!-- header -->
+
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <img src="Assets/Ehgzly.png" alt="Website Icon">
+                <h1 class="header-title">Ehgezly||احجزلي</h1>
+            </div>
+            <div class="header-center">
+                <a href="/Home/home.html" class="header-link">Home</a>
+                <span class="header-link-space"></span>
+                <a href="#" class="header-link">Reservations</a>
+            </div>
+            <div class="header-right">
+                <button class="header-button">Sign out</button>
+            </div>
+        </header>
+
+        <!--TimeLine-->
+        <section class="time-line-box">
+            <div class="swiper-container text-center">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="timestamp"><span class="date"></span></div>
+                        <div class="status2"><span>Sign up</span></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="timestamp"><span class="date"></span></div>
+                        <div class="status1"><span>Add restaurant information</span></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!--end of timeline-->
+
+
+        <!--Fields-->
+        <form action="/addRes2" method="post">
+            <div class="gridsContainer">
+                <div class="wrapper">
+                    <div class="box1">
+                        <label class="formLabel" for="RestaurantName">Restaurant name</label> <br>
+                        <input class="formInput" type="text" id="RestaurantName" name="RestaurantName" required>
+                        <br><br>
+                        <label class="formLabel" for="PhuneNum">Phone Number</label> <br>
+                        <input class="formInput" type="tel" id="PhuneNum" name="PhuneNum" required>
+                        <br><br>
+                        <label class="formLabel" for="Discription">Discription</label> <br>
+                        <input class="formInput" type="text" id="Discription" name="Discription" required>
+                    </div>
+
+                    <div class="box2">
+                        <div class="box2box">
+                            <div class="content">
+                                <h1 id="logo-header">Add Logo</h1>
+                                <!-- <button id="logo">Add Img</button> -->
+                                <label for="upload-Logo" id="logo">Add Img</label>
+                                <input type="file" accept="Image/jpeg, Image/jpg, Image/png" id="upload-Logo" style="display: none;" required>
+                                <script>
+                                    let logoPic = document.getElementById("logo-header");
+                                    let inputLogo = document.getElementById("upload-Logo");
+
+                                    inputLogo.addEventListener("input", ()=>{
+                                        if (inputLogo.files.length){
+                                            logoPic.innerHTML = `${inputLogo.files[0].name}`
+                                        }
+                                        else{
+                                            logoPic.innerHTML = 'Enter Logo'
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="box1">
+
+                    </div>
+
+                    <div class="box2">
+                        <label class="formLabel" for="Type">Google maps location(s) link</label><br>
+                        <input class="formInput" type="text" id="Type" name="Type" required>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div class="box1">
+
+                    </div>
+
+                    <div class="box2">
+                        <label class="formLabel" for="Type">Number of seats</label><br>
+                        <select class="numOfSeats" name="status" id="status" required>
+                            <option value="Approved">1</option>
+                            <option value="Suspended">2</option>
+                            <option value="Approved">3</option>
+                            <option value="Suspended">4</option>
+                            <option value="Approved">5</option>
+                            <option value="Approved">6</option>
+                            <option value="Approved">7</option>
+                            <option value="Approved">8</option>
+                            <option value="Approved">9</option>
+                            <option value="Approved">10</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <!--Menu-->
+            <!-- <div class="MenuHeader">Menu</div>
+            <hr>
+
+            <div class="menu-container">
+                <div class="Appetizer">
+                    <div class="menu-category">Appetizer</div>
+                    <div class="menu-card">
+                        <div class="menu-card-content">
+                            <button class="menuImgBtn">Add Img</button>
+                            <input type="text" class="titleInput" value="Dish Name">
+                            <input type="text" class="priceInput" value="Price">
+                        </div>
+                    </div>
+                    <div class="menu-card">
+                        <div class="plus-card-content">
+                            <div class="plussign"></div>
+                        </div>
+                    </div>
+                </div>
+
+            
+            <div class="Main-Dishes">
+                <div class="menu-category">
+                    <p>Main Dishes</p>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-content">
+                        <button class="menuImgBtn">Add Img</button>
+                        <input type="text" class="titleInput" value="Dish Name">
+                        <input type="text" class="priceInput" value="Price">
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="plus-card-content">
+                        <div class="plussign"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="Desserts">
+                <div class="menu-category">
+                    <p>Dessert</p>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-card-content">
+                        <button class="menuImgBtn">Add Img</button>
+                        <input type="text" class="titleInput" value="Dish Name">
+                        <input type="text" class="priceInput" value="Price">
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="plus-card-content">
+                        <div class="plussign"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+            <div class="form-group">
+                <button 
+                style="margin: 3% 25%;"
+                type="submit" class="btn-register">Register Now!</button>
+            </div>
+        </form>
+
+
+
+
+
+    </div>
+    <!-- End of Menus -->
+
+    </div>
+    <!--End of fields-->
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-item">
+                <a href="/Home/home.html">Home</a>
+            </div>
+            <div class="footer-item">
+                <a href="#">About</a>
+            </div>
+            <div class="footer-item">
+                <a href="#">Contact us</a>
+            </div>
+            <div class="footer-item">
+                <a href="/AddResturant1/AddResturanStep1.html">Add Your Restaurant</a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            &copy; 2023 all right reserved for Ehgezly
+        </div>
+    </footer>
+</body>
+
+</html>
