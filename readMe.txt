@@ -1,7 +1,5 @@
 Website name Ehgezly||احجزلي
-Group number: 37
 
-First, Import Phase2 file into your VS 
 
 #Guide for User pages
 To go for users pages, at the beggining, you should start the Home.html page from VS in you localserver.
